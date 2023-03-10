@@ -6,15 +6,15 @@
 /*   By: laurgonz <laurgonz@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/08 16:19:00 by laurgonz          #+#    #+#             */
-/*   Updated: 2023/03/08 16:19:46 by laurgonz         ###   ########.fr       */
+/*   Updated: 2023/03/10 16:03:33 by laurgonz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include<stdio.h>
 
-int	ft_isdigit(int c);
+int	ft_isprint(int c);
 
 int	main(void)
 {
-	printf("%d", ft_isdigit('c'));
+	printf("%d", ft_isprint(' '));
 	return (0);
 }

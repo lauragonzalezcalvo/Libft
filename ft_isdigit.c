@@ -6,12 +6,12 @@
 /*   By: laurgonz <laurgonz@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/08 16:12:09 by laurgonz          #+#    #+#             */
-/*   Updated: 2023/03/08 16:17:34 by laurgonz         ###   ########.fr       */
+/*   Updated: 2023/03/10 15:57:29 by laurgonz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 int	ft_isdigit(int c)
 {
-	if (c >= '0' || c <= '9')
+	if (c >= '0' && c <= '9')
 		return (1);
 	return (0);
 }
