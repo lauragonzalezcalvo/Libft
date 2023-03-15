@@ -12,6 +12,16 @@
 
 #include "libft.h"
 
+int	ft_strlen(char *str)
+{
+	int	i;
+
+	i = 0;
+	while (str[i] != '\0')
+		i++;
+	return (i);
+}
+
 size_t  ft_strlcpy(char *dst, const char *src, size_t dstsize)
 {
     size_t i;
@@ -34,12 +44,14 @@ size_t  ft_strlcpy(char *dst, const char *src, size_t dstsize)
     return (x);
 }
 
-#include<string.h>
 int main(void)
 {
     char a[4] = "holi";
     char b[5] = "holis";
-    printf("%zu", ft_strlcpy(a, b, 4));
-    //printf("%zu", strlcpy(a, b, 4));
+
+    char c[4] = "holi";
+    char d[5] = "holis";
+    printf("%zu\n", ft_strlcpy(a, b, 4));
+    printf("%zu\n", strlcpy(c, d, 4));
     return(0);
 }
