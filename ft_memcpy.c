@@ -10,25 +10,40 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-void *ft_memcpy(void *restrict dst, const void *restrict src, size_t n)
+#include"libft.h"
+
+void *ft_memcpy(void  dst, const void src, size_t n)
 {
-	char *dest = (char *)dst;
-	char *origin = (char *)src;
+	// char *dest = (char *)dst;
+	// char *origin = (char *)src;
+	// size_t i;
+
+	// i = 0;
+	// while (i < n)
+	// {
+	// 	origin[i] = dest[i];
+	// 	i++;
+	// }
+	// return (dest);
+
+	char *dest;
+	char *origin;
 	size_t i;
 
+	dest = dst;
+	origin = src;
 	i = 0;
-	while (i < n)
+	while(i < n)
 	{
 		origin[i] = dest[i];
 		i++;
 	}
-	return (dest);
-}
+	return dest;
 
-#include"libft.h"
 
 int main(void)
 {
-	char str[10] = "holi";
-    printf("%s", ft_memcpy(str, "hello", 2));
+	char str[5] = "holi";
+	char str2[5] = "holi";
+    printf("%s", ft_memcpy(str, str2, 2));
 }
