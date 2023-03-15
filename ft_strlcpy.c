@@ -10,33 +10,36 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libtf.h"
+#include "libft.h"
 
-int	ft_strlen(char *str)
+size_t  ft_strlcpy(char *dst, const char *src, size_t dstsize)
 {
-	int	i;
+    size_t i;
+    size_t x;
+    char *src1;
 
-	i = 0;
-	while (str[i] != '\0')
-		i++;
-	return (i);
-}
 
-size_t  strlcpy(char * restrict dst, const char * restrict src, size_t dstsize)
-{
-    unsigned    int i;
-    unsigned    int x;
-
-    x = ft_strlen(src);
+    src1 = (char *)src;
+    x = ft_strlen(src1);
     i = 0;
     if (dstsize != 0)
     {
-        
+        while (src1[i] != '\0' && i < dstsize - 1)
+        {
+            dst[i] = src1[i];
+            i++;
+        }
+        dst[i] = '\0';
     }
+    return (x);
 }
 
+#include<string.h>
 int main(void)
 {
-
+    char a[4] = "holi";
+    char b[5] = "holis";
+    printf("%zu", ft_strlcpy(a, b, 4));
+    //printf("%zu", strlcpy(a, b, 4));
     return(0);
 }

@@ -1,36 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_memcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: laurgonz <laurgonz@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/03/13 12:41:13 by laurgonz          #+#    #+#             */
-/*   Updated: 2023/03/13 13:07:38 by laurgonz         ###   ########.fr       */
+/*   Created: 2023/03/15 14:45:52 by laurgonz          #+#    #+#             */
+/*   Updated: 2023/03/15 16:29:33 by laurgonz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-
-void	*ft_memset(void *b, int c, size_t len)
+void *memcpy(void *restrict dst, const void *restrict src, size_t n)
 {
-	unsigned char	*str;
-	unsigned char	a;
-	size_t			i;
 
-	str = (unsigned char *)b;
-	a = (unsigned char)c;
-	i = 0;
-	while (i < len)
-	{
-		str[i] = a;
-		i++;
-	}
-	return (str);
 }
-/*
-int	main(void)
+
+#include"libft.h"
+
+int main(void)
 {
-	char str[6] = "holis";
-	printf("%s", ft_memset(str, '2', 2));
-}*/
+	char str[10] = "holi";
+    printf("%s", ft_memcpy(str, "hello", 2));
+}
