@@ -40,11 +40,9 @@ int main(void)
 {
 	char dest1[5] = "holi";
 	char org1[5] = "holi";
-	char dest2[5] = "holi";
-	char org2[5] = "holi";
 
     printf("%p\n", memcpy(dest1, org1, 5));
-    printf("%p\n", ft_memcpy(dest2, org2, 5));
+    printf("%p\n", ft_memcpy(dest1, org1, 5));
     return 0;
 }
 */
