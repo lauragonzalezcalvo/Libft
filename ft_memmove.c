@@ -4,7 +4,6 @@
 
 void *ft_memmove(void *dest, const void *src, size_t n)
 {
-    // La función memmove copia los primeros n bytes del bloque de memoria de origen apuntado por src al bloque de memoria de destino apuntado por dest. La función devuelve un puntero al bloque de memoria de destino.
 
     const char *origin;
     char *dst;
@@ -29,5 +28,7 @@ int main(void)
 
     printf("%p\n",  memmove( b, a, 5 ));
     printf("%p\n",  ft_memmove( b, a, 5 ));
+    printf("%p\n",  a);
+    printf("%p\n", b);
 }
 
