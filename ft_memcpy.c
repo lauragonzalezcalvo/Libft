@@ -12,38 +12,39 @@
 
 #include"libft.h"
 
-void *ft_memcpy(void  dst, const void src, size_t n)
+void *ft_memcpy(void *dst, const void *src, size_t n)
 {
-	// char *dest = (char *)dst;
-	// char *origin = (char *)src;
-	// size_t i;
-
-	// i = 0;
-	// while (i < n)
-	// {
-	// 	origin[i] = dest[i];
-	// 	i++;
-	// }
-	// return (dest);
+    if (dst == NULL || src == NULL)
+	{
+        return NULL;
+    }
 
 	char *dest;
-	char *origin;
-	size_t i;
+	const char *origin ;
 
 	dest = dst;
-	origin = src;
+	origin = src; 
+	size_t i;
 	i = 0;
-	while(i < n)
+
+	while (i < n)
 	{
-		origin[i] = dest[i];
+		dest[i] = origin[i];
 		i++;
 	}
-	return dest;
 
-
+	return (void *)dst;
+}
+/*
 int main(void)
 {
-	char str[5] = "holi";
-	char str2[5] = "holi";
-    printf("%s", ft_memcpy(str, str2, 2));
+	char dest1[5] = "holi";
+	char org1[5] = "holi";
+	char dest2[5] = "holi";
+	char org2[5] = "holi";
+
+    printf("%p\n", memcpy(dest1, org1, 5));
+    printf("%p\n", ft_memcpy(dest2, org2, 5));
+    return 0;
 }
+*/
