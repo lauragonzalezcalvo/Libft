@@ -11,7 +11,7 @@
 /* ************************************************************************** */
 
 #include "libft.h"
-
+/*
 int	ft_strlen(char *str)
 {
 	int	i;
@@ -21,7 +21,7 @@ int	ft_strlen(char *str)
 		i++;
 	return (i);
 }
-
+*/
 size_t  ft_strlcpy(char *dst, const char *src, size_t dstsize)
 {
     size_t i;
@@ -43,7 +43,7 @@ size_t  ft_strlcpy(char *dst, const char *src, size_t dstsize)
     }
     return (x);
 }
-
+/*
 int main(void)
 {
     char a[4] = "holi";
@@ -54,4 +54,4 @@ int main(void)
     printf("%zu\n", ft_strlcpy(a, b, 4));
     printf("%zu\n", strlcpy(c, d, 4));
     return(0);
-}
+}*/

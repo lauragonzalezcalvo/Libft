@@ -28,6 +28,6 @@ size_t	ft_strlen(const char *s);
 void *ft_memset(void *b, int c, size_t len);
 size_t  ft_strlcpy(char * restrict dst, const char * restrict src, size_t dstsize);
 void *ft_memcpy(void *dst, const void *src, size_t n);
-void *memmove(void *dest, const void *src, size_t n);
+void *ft_memmove(void *dest, const void *src, size_t n);
 
 #endif
