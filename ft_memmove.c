@@ -10,30 +10,44 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include <string.h>
 
-void *ft_memmove(void *dest, const void *src, size_t n) {
-    char *dst = (char*)dest;
-    const char *s = (const char*)src;
-    size_t i;
-    
-    if (dst < s) {
-        i = 0;
-        while( i < n) {
-            i++;
-            dst[i] = s[i];
-        }
-    } else {
-        i = n;
-        while( i > 0) {
-            i--;
-            dst[i] = s[i];
-        }
-    }
-    return dest;
+void	reverse_copy(char *d, const char *s, size_t len)
+{
+	while (len > 0)
+	{
+		d[len - 1] = s[len - 1];
+		len--;
+	}
 }
 
+void	*ft_memmove(void *dst, const void *src, size_t len)
+{
+	size_t		i;
+	char		*d;
+	const char	*s;
+
+	i = 0;
+	d = dst;
+	s = src;
+	if (dst == NULL && src == NULL)
+		return (NULL);
+	if (dst <= src)
+	{
+		while (i < len)
+		{
+			d[i] = s[i];
+			i++;
+		}
+	}
+	else
+	{
+		reverse_copy(d, s, len);
+	}
+	return (dst);
+}
 /*
+#include <stdio.h>
 int main(void)
 {
     char a[7] = "abcdefg";

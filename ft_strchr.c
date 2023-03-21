@@ -1,27 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_toupper.c                                       :+:      :+:    :+:   */
+/*   ft_strchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: laurgonz <laurgonz@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/03/17 11:40:50 by laurgonz          #+#    #+#             */
-/*   Updated: 2023/03/17 11:40:53 by laurgonz         ###   ########.fr       */
+/*   Created: 2023/03/17 11:43:02 by laurgonz          #+#    #+#             */
+/*   Updated: 2023/03/17 11:43:05 by laurgonz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+/*Busca la primera aparicion del caracter c en el strign str. 
+ Devuelve el string a partir del caracter introducido. Sino lo contiene devuelve null*/
 
+#include"libft.h"
 
-#include "libft.h"
-
-int ft_toupper(int c)
+char *ft_strchr(const char *s, int c)
 {
-    if (c >=  97 && c <= 122)
-        c = c - 32;
-    return (c);
+    int i;
+
+    i=0;
+    while(s[i])
 }
-/*
+
+
 int main(void)
 {
-    printf("%d\n", toupper('A'));
-    printf("%d\n", ft_toupper('A'));
-}*/
+    printf("%s\n", strchr("hello", 'e'));
+}
