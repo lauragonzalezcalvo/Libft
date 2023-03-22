@@ -6,34 +6,39 @@
 /*   By: laurgonz <laurgonz@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/22 15:20:32 by laurgonz          #+#    #+#             */
-/*   Updated: 2023/03/22 15:58:02 by laurgonz         ###   ########.fr       */
+/*   Updated: 2023/03/22 16:15:17 by laurgonz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	memcmp(const void *s1, const void *s2, size_t n)
+int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {
 	char	*str1;
 	char	*str2;
+	size_t	i;
 
 	str1 = (char *)s1;
 	str2 = (char *)s2;
-	while (
+	i = 0;
+	while ((str1[i] != '\0' || str2[i] != '\0')  && (i < n))
+	{
+		i++;
+	}
+	return (str1 - str2);
 }
 
 int	main(void)
 {
-	char buffer1[] = "DWgaOtP12df0";
-  char buffer2[] = "DWGAOTP12DF0";
+ char buffer1[] = "DWgaOtP12df0";
+ char buffer2[] = "DWGAOTP12DF0";
 
-  int n;
+ printf("%d\n", memcmp(buffer1, buffer2, 2));
 
-  n=memcmp ( buffer1, buffer2, sizeof(buffer1) );
+ char buffer3[] = "DWgaOtP12df0";
+ char buffer4[] = "DWGAOTP12DF0";
 
-  if (n>0) printf ("'%s' is greater than '%s'.\n",buffer1,buffer2);
-  else if (n<0) printf ("'%s' is less than '%s'.\n",buffer1,buffer2);
-  else printf ("'%s' is the same as '%s'.\n",buffer1,buffer2);
+ printf("%d\n", ft_memcmp(buffer3, buffer4, 2));
+}
 
-  return 0;
- }
+
