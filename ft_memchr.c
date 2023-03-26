@@ -9,44 +9,42 @@
 /*   Updated: 2023/03/22 15:17:42 by laurgonz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-/* DESCRIPCIÓN
- * La función *memchr() busca en los primeros n bytes de s el caracter c.
-La función acaba al encontrar el primer carácter que concuerde con  c
-s Puntero a la cadena de carácteres.
-c Valor del carácter a buscar.
-n Numero de bytes en los que buscar, empezando por la derecha.*/
+/* DESCRIPCIÓN/
+ * La función strchr() toma como argumento un string, un entero y un size_t.
+ * El entero c es el entero que debe localizar, el size_t son los primeros
+ * n caracteres donde busca 
+ * VALOR DEVUELTO
+ * Si no encuentra c en los primeros n caracteres, devuelve NULL.
+ * Si lo encuentra, devuelve un puntero con la primera ocurrencia
+ * del carácter c en la cadena de caracteres s.*/
 
 #include"libft.h"
 
 void	*ft_memchr(const void *s, int c, size_t n)
 {
-	char	*str;
+	unsigned char	*str;
 	size_t	i;
-	char	letter;
+	unsigned char	letter;
 
 	i = 0;
-	str = (char *)s;
-	letter = (char)c;
-	while (i <= n)
+	str = (unsigned char *)s;
+	letter = (unsigned char)c;
+	while (i < n)
 	{
-		if (str[i] == c)
+		if (str[i] == letter)
 			return (&str[i]);
 		i++;
 	}
 	return (NULL);
 }
-/*
+
 int	main(void)
 {
 	char str[] = "Motomami";
-   char *puntero; 
-   puntero = (void  *)str;
    printf( "%s\n", str); 
-   printf( "%s\n", memchr(puntero, 'a', 2));
+   printf( "%s\n", (char *)memchr(str, 'o', 2));
 
    char str2[] = "Motomami";
-   char *puntero2;
-   puntero2 = (void  *)str2;
    printf( "%s\n", str2);
-   printf( "%s\n", ft_memchr(puntero2, 'a', 2));
-}*/
+   printf( "%s\n", (char *)ft_memchr(str2, 'o', 2));
+}
