@@ -39,4 +39,5 @@ char *ft_strrchr(const char *s, int c);
 void	*ft_memchr(const void *s, int c, size_t n);
 int	ft_memcmp(const void *s1, const void *s2, size_t n);
 char *ft_strdup(const char *s1);
+char *ft_strmapi(char const *s, char (*f)(unsigned int, char));
 #endif
