@@ -14,10 +14,22 @@
 
 char *ft_strtrim(char const *s1, char const *set)
 {
+	size_t	i;
+	size_t	len;
+	char	*str;
 
+	i = 0;
+	len = ft_strlen(s1);
+	str = malloc(sizeof(char) * len + 1);                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        
+	while(s1[i])
+	{
+
+		i++;
+	}
+	return(0);
 }
 
 int	main(void)
 {
-	printf("%d", ft_strtrim("h", "hello"));
+	printf("%s", ft_strtrim(" hello ", " "));
 }
