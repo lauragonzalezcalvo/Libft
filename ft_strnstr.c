@@ -15,15 +15,15 @@
 char *ft_strnstr(const char *haystack, const char *needle, size_t len)
 {
 	char	*str;
-	char	*str2;
+	char	*need;
 	size_t	i;
 	
 	str = (char *)haystack;
 	need = (char *)needle;
 	i = 0;
-	while (str1[i] != '\0'
+	while (str[i] != '\0')
 	{
-		if (str1[i] == str2[i])
+		if (str[i] == need[i])
 			return (char *)len;
 		i++;
 	}
@@ -35,6 +35,5 @@ int	main(void)
 	char str2[] = "es";
 	printf("%s\n", strnstr(str1, str2, 1));
 	printf("%s\n", ft_strnstr(str1, str2, 1));
-
 }
 
