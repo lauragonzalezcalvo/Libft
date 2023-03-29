@@ -41,4 +41,6 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n);
 char *ft_strdup(const char *s1);
 char *ft_strmapi(char const *s, char (*f)(unsigned int, char));
 void ft_striteri(char *s, void (*f)(unsigned int, char*));
+char	*ft_strnstr(const char *haystack, const char *needle, size_t len);
+void ft_putchar_fd(char c, int fd);
 #endif

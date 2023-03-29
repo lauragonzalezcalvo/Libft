@@ -30,18 +30,19 @@ char *ft_strtrim(char const *s1, char const *set)
 	// return (ft_substr(s1, i, set_len));
 
 	size_t	i;
-	size_t	l;
-	l = ft_strlen(s1);
+	size_t	len;
+	len = ft_strlen(s1);
 
 
 	i = 0;
 	//f = ft_strchr(set, s1[i]);//encontramos el caracter
-	printf("%s", ft_strnchr(set, s1, len));
+	printf("%s\n", ft_strnstr(s1, set , len));
+	printf("%s\n", ft_strchr(set, s1[i]));
 
 	return(0);
 }
 
 int	main(void)
 {
-	printf("%s", ft_strtrim("helo", "l"));
+	printf("%s", ft_strtrim("0helo", "0"));
 }
