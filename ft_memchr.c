@@ -37,7 +37,7 @@ void	*ft_memchr(const void *s, int c, size_t n)
 	}
 	return (NULL);
 }
-
+/*
 int	main(void)
 {
 	char str[] = "Motomami";
@@ -47,4 +47,4 @@ int	main(void)
    char str2[] = "Motomami";
    printf( "%s\n", str2);
    printf( "%s\n", (char *)ft_memchr(str2, 'o', 2));
-}
+}*/

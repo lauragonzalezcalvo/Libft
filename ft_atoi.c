@@ -36,11 +36,10 @@ int	ft_atoi(const char *str)
 		i++;
 	}
 	return (number * n);
-
 }
-
+/*
 int	main(void)
 {
 	printf("%d", atoi("12abc1234ab567"));
 	printf("%d", ft_atoi("12abc1234ab567"));	
-}
+}*/

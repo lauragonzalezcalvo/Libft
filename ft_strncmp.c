@@ -18,17 +18,18 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 	unsigned char	*str1;
 	unsigned char	*str2;
 
-	i = 0;
 	str1 = (unsigned char *)s1;
 	str2 = (unsigned char *)s2;
-	while (((str1[i] != '\0' && str2[i] != '\0')
-			&& (str1[i] == str2[i])) && i < n)
+	i = 0;
+	while (((str1[i] != '\0' && str2[i] != '\0') && (str1[i] == str2[i])) && i < n)
 		i++;
-	return (str1[i] - str2[i]);
+	while ((str1[i] != str2[i]) && (i < n))
+		return (str1[i] - str2[i]);
+	return (0);
 }
 /*
 int	main(void)
 {
-	printf("%d\n", strncmp("hello", "hellos", 7));
-    printf("%d\n", ft_strncmp("hello", "hellos", 7));
+	printf("%d\n", strncmp("hellos", "helloh", 6));
+    printf("%d\n", ft_strncmp("hellos", "helloh", 6));
 }*/

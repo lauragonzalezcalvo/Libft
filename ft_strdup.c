@@ -15,30 +15,21 @@ duplicado de la cadena apuntada por s.La  memoria  para  la  nueva  cadena  se  
 
 #include"libft.h"
 
-char	*ft_strcpy(char *dest, char *src)
-{
-	int	i;
-
-	i = 0;
-	while (src[i] != '\0')
-	{
-		dest[i] = src[i];
-		i++;
-	}
-	dest[i] = '\0';
-	return (dest);
-}
-
-
 char *ft_strdup(const char *s1)
 {
 	char	*str;
 	int		i;
-	char	*strcpy;
 
 	i = 0;
-	str = (char *)malloc(sizeof(s1));
-	strcpy = ft_strcpy(str, (char *)s1);
+	str = (char *)malloc(((ft_strlen(s1) +1) * sizeof(char)));
+	if(str == NULL)
+		return(NULL);
+	while (s1[i] != '\0')
+	{
+		str[i] = s1[i];
+		i++;
+	}
+	str[i] = '\0';
 	return (str);
 }
 /*
