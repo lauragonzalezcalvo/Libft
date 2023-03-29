@@ -6,7 +6,7 @@
 /*   By: laurgonz <laurgonz@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/27 15:20:36 by laurgonz          #+#    #+#             */
-/*   Updated: 2023/03/28 15:31:34 by laurgonz         ###   ########.fr       */
+/*   Updated: 2023/03/29 11:22:01 by laurgonz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,11 +30,13 @@ char *ft_strtrim(char const *s1, char const *set)
 	// return (ft_substr(s1, i, set_len));
 
 	size_t	i;
-	//char	*f;
+	size_t	l;
+	l = ft_strlen(s1);
+
 
 	i = 0;
 	//f = ft_strchr(set, s1[i]);//encontramos el caracter
-	printf("%s", ft_strchr(set, s1[i]));
+	printf("%s", ft_strnchr(set, s1, len));
 
 	return(0);
 }
