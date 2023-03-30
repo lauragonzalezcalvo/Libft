@@ -12,7 +12,7 @@
 
 #include "libft.h"
 
-char *ft_strtrim(char const *s1, char const *set)
+char *ft_strtrim(char const *s, char const *set)
 {
 	// size_t	i;
 	// size_t	l;
@@ -31,18 +31,33 @@ char *ft_strtrim(char const *s1, char const *set)
 
 	size_t	i;
 	size_t	len;
-	len = ft_strlen(s1);
-
+	len = ft_strlen(s);
+	char *s1;
+	s1 = (char *)s;
+	size_t	j;
 
 	i = 0;
+	if (s1[0] == '\0')
+		return (s1);
+	while (s1[i] != '\0' && i < len -1 )
+	{
+		j = 0;
+		while (s1[i + j] == set[j] && i + j < len && set[j] != '\0')
+			j++;
+		if (s1[j] == set[j])
+			return (&s1[i]);
+		i++;
+	}
+
 	//f = ft_strchr(set, s1[i]);//encontramos el caracter
-	printf("%s\n", ft_strnstr(s1, set , len));
-	printf("%s\n", ft_strchr(set, s1[i]));
+	//printf("Soy strlen:%zu\n", len);
+	//printf("Soy strnstr:%s\n", ft_strnstr(s1, set , 9));
+	//printf("%s\n", ft_strchr(set, s1[i]));
 
 	return(0);
 }
 
 int	main(void)
 {
-	printf("%s", ft_strtrim("0helo", "0"));
+	printf("Soy strtrim:%s", ft_strtrim("esto es una cadena", "es"));
 }

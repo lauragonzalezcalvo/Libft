@@ -22,6 +22,8 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	size_t	i;
 
 	i = 0;
+	if(start >= len)
+		return(ft_strdup(""));
 	str = (char *)malloc(sizeof(char) * (len + 1));
 	if (str == NULL || s == NULL)
 		return (NULL);
@@ -37,5 +39,5 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 /*
 int	main(void)
 {
-	printf("%s\n", ft_substr("camaleo", 1, 9 ));
+	printf("%s\n", ft_substr("camaleo", 9, 1 ));
 }*/
