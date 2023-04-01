@@ -6,7 +6,7 @@
 /*   By: laurgonz <laurgonz@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/22 19:34:02 by laurgonz          #+#    #+#             */
-/*   Updated: 2023/03/29 18:57:50 by laurgonz         ###   ########.fr       */
+/*   Updated: 2023/04/01 15:25:49 by laurgonz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include"libft.h"
@@ -22,14 +22,11 @@ int	ft_atoi(const char *str)
 	i = 0;
 	n = 1;
 	number = 0;
-	while ((a[i] >= '\t' && a[i] <= '\r') || a[i] == ' ')
+	while ((a[i] >= 9 && a[i] <= 23) || a[i] == ' ' || str[i] == '+')
 		i++;
-	while (a[i] == '-' || str[i] == '+')
-	{
-		if (a[i] == '-')
-			n *= -1;
-		i++;
-	}
+	if (a[i] == '-')
+			n = -1;
+	i++;
 	while (a[i] >= '0' && a[i] <= '9')
 	{
 		number = (number * 10) + (str[i] - '0');
@@ -37,9 +34,9 @@ int	ft_atoi(const char *str)
 	}
 	return (number * n);
 }
-/*
+
 int	main(void)
 {
-	printf("%d", atoi("12abc1234ab567"));
-	printf("%d", ft_atoi("12abc1234ab567"));	
-}*/
+	printf("%d\n", atoi("++47"));
+	printf("%d\n", ft_atoi("++47"));	
+}
