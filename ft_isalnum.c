@@ -6,14 +6,16 @@
 /*   By: laurgonz <laurgonz@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/10 10:51:26 by laurgonz          #+#    #+#             */
-/*   Updated: 2023/03/10 11:20:05 by laurgonz         ###   ########.fr       */
+/*   Updated: 2023/04/01 19:19:15 by laurgonz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include"libft.h"
+
 int	ft_isalnum(int c)
 {
-	if ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z') || 
-			(c >= '0' && c <= '9'))
+	if ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z')
+		|| (c >= '0' && c <= '9'))
 		return (1);
 	return (0);
 }

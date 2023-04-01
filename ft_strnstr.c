@@ -6,7 +6,7 @@
 /*   By: laurgonz <laurgonz@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/22 16:40:41 by laurgonz          #+#    #+#             */
-/*   Updated: 2023/03/29 11:21:06 by laurgonz         ###   ########.fr       */
+/*   Updated: 2023/04/01 20:05:39 by laurgonz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 	char	*need;
 	size_t	i;
 	size_t	j;
-	
+
 	str = (char *)haystack;
 	need = (char *)needle;
 	if (!str && len == 0)

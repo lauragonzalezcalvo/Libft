@@ -6,7 +6,7 @@
 /*   By: laurgonz <laurgonz@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/21 16:59:17 by laurgonz          #+#    #+#             */
-/*   Updated: 2023/03/21 20:50:52 by laurgonz         ###   ########.fr       */
+/*   Updated: 2023/04/01 19:56:26 by laurgonz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,8 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 	str1 = (unsigned char *)s1;
 	str2 = (unsigned char *)s2;
 	i = 0;
-	while (((str1[i] != '\0' && str2[i] != '\0') && (str1[i] == str2[i])) && i < n)
+	while (((str1[i] != '\0' && str2[i] != '\0')
+			&& (str1[i] == str2[i])) && i < n)
 		i++;
 	while ((str1[i] != str2[i]) && (i < n))
 		return (str1[i] - str2[i]);

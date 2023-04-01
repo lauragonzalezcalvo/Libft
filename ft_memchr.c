@@ -6,7 +6,7 @@
 /*   By: laurgonz <laurgonz@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/22 10:41:53 by laurgonz          #+#    #+#             */
-/*   Updated: 2023/03/22 15:17:42 by laurgonz         ###   ########.fr       */
+/*   Updated: 2023/04/01 19:21:57 by laurgonz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 /* DESCRIPCIÓN/
@@ -23,7 +23,7 @@
 void	*ft_memchr(const void *s, int c, size_t n)
 {
 	unsigned char	*str;
-	size_t	i;
+	size_t			i;
 	unsigned char	letter;
 
 	i = 0;

@@ -6,7 +6,7 @@
 /*   By: laurgonz <laurgonz@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/27 15:20:36 by laurgonz          #+#    #+#             */
-/*   Updated: 2023/03/29 11:22:01 by laurgonz         ###   ########.fr       */
+/*   Updated: 2023/04/01 18:20:36 by laurgonz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,16 +48,16 @@ char *ft_strtrim(char const *s, char const *set)
 			return (&s1[i]);
 		i++;
 	}
-
-	//f = ft_strchr(set, s1[i]);//encontramos el caracter
-	//printf("Soy strlen:%zu\n", len);
-	//printf("Soy strnstr:%s\n", ft_strnstr(s1, set , 9));
-	//printf("%s\n", ft_strchr(set, s1[i]));
-
+/*
+	f = ft_strchr(set, s1[i]);//encontramos el caracter
+	printf("Soy strlen:%zu\n", len);
+	printf("Soy strnstr:%s\n", ft_strnstr(s1, set , 9));
+	printf("%s\n", ft_strchr(set, s1[i]));
+*/
 	return(0);
 }
-/*
+
 int	main(void)
 {
 	printf("Soy strtrim:%s", ft_strtrim("esto es una cadena", "es"));
-}*/
+}

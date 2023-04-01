@@ -6,7 +6,7 @@
 /*   By: laurgonz <laurgonz@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/29 12:58:38 by laurgonz          #+#    #+#             */
-/*   Updated: 2023/03/29 14:32:37 by laurgonz         ###   ########.fr       */
+/*   Updated: 2023/04/01 19:32:50 by laurgonz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ void	ft_putstr_fd(char *s, int fd)
 	int	i;
 
 	i = 0;
-	if(!s)
+	if (!s)
 		return ;
 	while (s[i] != '\0')
 	{

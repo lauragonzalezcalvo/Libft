@@ -6,13 +6,13 @@
 /*   By: laurgonz <laurgonz@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/21 15:32:43 by laurgonz          #+#    #+#             */
-/*   Updated: 2023/03/21 17:01:28 by laurgonz         ###   ########.fr       */
+/*   Updated: 2023/04/01 19:57:57 by laurgonz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include"libft.h"
 
-char *ft_strrchr(const char *s, int c)
+char	*ft_strrchr(const char *s, int c)
 {
 	char	charcpy;
 	int		len;
@@ -27,7 +27,7 @@ char *ft_strrchr(const char *s, int c)
 			return (&ss[len]);
 		len--;
 	}
-	return (NULL);	
+	return (NULL);
 }
 
 /*

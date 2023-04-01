@@ -6,7 +6,7 @@
 /*   By: laurgonz <laurgonz@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/13 15:55:07 by laurgonz          #+#    #+#             */
-/*   Updated: 2023/03/14 12:15:45 by laurgonz         ###   ########.fr       */
+/*   Updated: 2023/04/01 19:13:23 by laurgonz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,16 +14,16 @@
 
 void	ft_bzero(void *s, size_t n)
 {
-    unsigned    int    i;
-    char    *dest;
+	unsigned int	i;
+	char			*dest;
 
-    i = 0;
-    dest = s;
-    while (i < n)
-    {
-        dest[i] = '\0';
-        i++;
-    }
+	i = 0;
+	dest = s;
+	while (i < n)
+	{
+		dest[i] = '\0';
+		i++;
+	}
 }
 /*
 #include<stdio.h>
