@@ -56,8 +56,8 @@ char *ft_strtrim(char const *s, char const *set)
 
 	return(0);
 }
-
+/*
 int	main(void)
 {
 	printf("Soy strtrim:%s", ft_strtrim("esto es una cadena", "es"));
-}
+}*/
