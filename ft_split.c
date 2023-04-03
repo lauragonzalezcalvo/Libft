@@ -6,7 +6,7 @@
 /*   By: laurgonz <laurgonz@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/01 18:19:03 by laurgonz          #+#    #+#             */
-/*   Updated: 2023/04/03 11:27:28 by laurgonz         ###   ########.fr       */
+/*   Updated: 2023/04/03 12:00:25 by laurgonz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 /* DESCRIPCIÓN/
@@ -28,7 +28,7 @@ int	ft_countwords(char const *s, char c)
 	counter = 0;
 	while (s[i] != '\0')
 	{
-		if (s[i] != c && s[i-1] == c)
+		if ((s[i] != c && s[i-1] == c) ||(s[i] != c && s[i] == s[0]))
 			counter++;
 		i++;
 	}
@@ -37,18 +37,18 @@ int	ft_countwords(char const *s, char c)
 
 char **ft_split(char const *s, char c)
 {
-	char	**numberwords;
+	char	**matrix;
 	// porque ponemos un char si lo que devolvemos es un int
 	// necesitaos saber el numero de palabras para malloc
-	numberwords = (char **)malloc(sizeof(char *) * (ft_countwords(s, c)) + 1);
+	matrix = (char **)malloc(sizeof(char *) * (ft_countwords(s, c)) + 1);
 	//printf("%d", ft_countwords(s, c));
-	
-
-	return(numberwords);
+	if (matrix == NULL)
+        return(NULL);
+	return(matrix);
 }
 
 int main(void)
 {
-	printf("%d", ft_countwords("---hola--que--tal", '-'));
-	printf("%s", *ft_split("---hola--que--tal", '-'));
+	printf("%d\n", ft_countwords("p-que-666 -tal", '-'));
+	printf("%s\n", *ft_split("---hola--que--tal", '-'));
 }
