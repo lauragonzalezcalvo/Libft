@@ -28,7 +28,25 @@ int	ft_extra( int n)
 		len++;
 	return (len);
 }
-
+char *ft_numbers(int n, int len, char *str)
+{
+	if (n == 0)
+		str[0] = '0';	
+	if (n < 0)
+	{
+		str[0] = '-';
+		n = -n;
+	}
+	while (len-- > 0)
+	{
+		if (str[len] != '-')
+		{
+			str[len] = (n % 10) + '0';
+			n /= 10;
+		}
+	}
+	return(str);
+}
 char	*ft_itoa(int n)
 {
 	char	*str;
@@ -41,21 +59,10 @@ char	*ft_itoa(int n)
 	if (str == NULL)
 		return (NULL);
 	str[len] = '\0';
-	if (n < 0)
-	{
-		str[0] = '-';
-		n = -n;
-	}
-	while (len-- >= 0)
-	{
-		if (str[len] != '-')
-		{
-			str[len] = (n % 10) + '0';
-			n /= 10;
-		}
-	}
+	str = ft_numbers(n, len, str);
 	return (str);
 }
+
 /*int main (void)
 {
      int num = -123;
