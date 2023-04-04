@@ -41,28 +41,7 @@ int ft_strlength(char const *s, char c)
 		length++;
 	return (length);
 }
-// en lugar de printarray ---> substring
-/* char *ft_printarray(char const *s, char c)
-{
-	char *new;
-	int j;
-	int k;
-	k = 0;
-	j = 0;
-	printf("%c  \n", c);
-	printf("%s \n", s);
-	while (s[j] != '\0')
-	{
-		if (s[j] != c)
-		{
-			new = malloc(sizeof(char) * (ft_strlength(&s[j], c) + 1));
-			k++;
-		}
-		j++;
-	}
-	return (new);
-}
- */
+
 void 	ft_free(char **matrix, int p)
 {
 	while (p >= 0)
@@ -78,9 +57,6 @@ char **ft_split(char const *s, char c)
 	char **matrix;
 		if (!s)
 		return (NULL);
-		
-	// porque ponemos un char si lo que devolvemos es un int
-	// necesitaos saber el numero de palabras para malloc
 	matrix = (char **)malloc(sizeof(char *) * (ft_countwords(s, c)) + 1);
 
 	if (matrix == NULL)

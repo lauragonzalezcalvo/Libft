@@ -25,7 +25,7 @@ char	*ft_strchr(const char *s, int c)
 	while (s[i] && s[i] != charcpy)
 		i++;
 	if (s[i] == charcpy)
-		return ((char *) s);
+		return ((char *) &s[i]);
 	return (NULL);
 }
 

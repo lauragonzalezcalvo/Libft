@@ -6,7 +6,7 @@
 /*   By: laurgonz <laurgonz@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/29 15:13:17 by laurgonz          #+#    #+#             */
-/*   Updated: 2023/04/01 18:13:41 by laurgonz         ###   ########.fr       */
+/*   Updated: 2023/04/04 10:54:50 by laurgonz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,10 +28,11 @@ int	ft_extra( int n)
 		len++;
 	return (len);
 }
-char *ft_numbers(int n, int len, char *str)
+
+char	*ft_numbers(int n, int len, char *str)
 {
 	if (n == 0)
-		str[0] = '0';	
+		str[0] = '0';
 	if (n < 0)
 	{
 		str[0] = '-';
@@ -45,8 +46,9 @@ char *ft_numbers(int n, int len, char *str)
 			n /= 10;
 		}
 	}
-	return(str);
+	return (str);
 }
+
 char	*ft_itoa(int n)
 {
 	char	*str;
