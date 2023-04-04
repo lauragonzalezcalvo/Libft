@@ -23,16 +23,12 @@ char	*ft_strtrim(char const *s, char const *set)
 	i = 0;
 	while (s[i] != '\0' && ft_strchr(set, s[i]))
 	{
-		i ++;
-		printf("hello primer condicional");
+		i++;
 	}
-	if (!ft_strchr(set, s[i]))
-		return ((char *)set);
 	l = ft_strlen(s);
 	while (l > 0 && ft_strchr(set, s[l]))
 	{
-		l --;
-		printf("hello segundo condicional");
+		l--;
 	}
 		
 	set_len = (l + 1) - i;
@@ -41,5 +37,6 @@ char	*ft_strtrim(char const *s, char const *set)
 /*
 int	main(void)
 {
-	printf("Soy strtrim: %s", ft_strtrim("\t\t\n\n\n\n\t", ""));
+	printf("Soy strtrim. \t: %s", ft_strtrim("  \t \t \n   \n\n\n\t", ""));
+	printf("Soy strtrim. space: %s", ft_strtrim("   ", ""));
 }*/

@@ -27,10 +27,17 @@ int ft_countwords(char const *s, char c)
 	counter = 0;
 	while (s[i] != '\0')
 	{
-		if ((s[i] != c && s[i - 1] == c) || (s[i] != c && s[i] == s[0]))
+		if ((s[i] != c && s[i - 1] == c) || (s[i] != c && s[i] == s[0]) )
 			counter++;
 		i++;
 	}
+	// while(s[i] == c)
+	// 	i++;
+	// if (s[i] != '\0')
+	// 	counter++;
+	// while(s[i] && s[i] != c)
+	// 	i++;
+	// printf("%d", counter);
 	return (counter);
 }
 int ft_strlength(char const *s, char c)
@@ -58,14 +65,17 @@ char **ft_split(char const *s, char c)
 		if (!s)
 		return (NULL);
 	matrix = (char **)malloc(sizeof(char *) * (ft_countwords(s, c)) + 1);
-
 	if (matrix == NULL)
 		return (NULL);
+	// if (ft_countwords(s, c) == 0)
+	// {
+	// 	// printf("hello");
+	// 	return(matrix);
+	// }
 	int p;
 	int	i;
 	p = 0;
 	i =  0;
-
 	while (p < ft_countwords(s, c))
 	{
 		if  (s[i] != c)
@@ -81,21 +91,27 @@ char **ft_split(char const *s, char c)
 		}
 			i++;
 	}
-
-
 	matrix[p] = 0;
 	return (matrix);
 }
 
-/*
-int main(void)
-{
-	char **arrayresult;
-	arrayresult = ft_split("-hola--que--tal", '-');
-	int i = 0;
-	while (arrayresult[i] !='\0')
-	{
-		printf("%s\n", arrayresult[i]);
-		i++;
-	}
-}*/
+
+// int main(void)
+// {
+// 	char **arrayresult;
+// 	arrayresult = ft_split("    ", ' ');
+// 	int i = 0;
+// 	while (arrayresult[i] !='\0')
+// 	{
+// 		printf("%s\n", arrayresult[i]);
+// 		i++;
+// 	}
+// 	char **arrayresult2;
+// 	arrayresult2 = ft_split("12", ' ');
+// 	int o = 0;
+// 	while (arrayresult2[o] !='\0')
+// 	{
+// 		printf("%s\n", arrayresult2[o]);
+// 		o++;
+// 	}
+// }
