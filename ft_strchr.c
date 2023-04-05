@@ -6,7 +6,7 @@
 /*   By: laurgonz <laurgonz@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/17 11:43:02 by laurgonz          #+#    #+#             */
-/*   Updated: 2023/03/22 15:12:03 by laurgonz         ###   ########.fr       */
+/*   Updated: 2023/04/05 17:30:48 by laurgonz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 /*Busca la primera aparicion del caracter c en el strign str. 

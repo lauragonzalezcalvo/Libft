@@ -6,7 +6,7 @@
 /*   By: laurgonz <laurgonz@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/29 15:13:17 by laurgonz          #+#    #+#             */
-/*   Updated: 2023/04/04 10:54:50 by laurgonz         ###   ########.fr       */
+/*   Updated: 2023/04/05 16:40:17 by laurgonz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,13 +19,16 @@ int	ft_extra( int n)
 
 	len = 0;
 	temp = n;
+	if (temp <= 0)
+	{
+		len ++;
+		temp = -temp;
+	}
 	while (temp != 0)
 	{
-		len++;
 		temp = temp / 10;
+		len ++;
 	}
-	if (n < 0 || n == 0)
-		len++;
 	return (len);
 }
 
@@ -38,13 +41,10 @@ char	*ft_numbers(int n, int len, char *str)
 		str[0] = '-';
 		n = -n;
 	}
-	while (len-- > 0)
+	while (n > 0)
 	{
-		if (str[len] != '-')
-		{
-			str[len] = (n % 10) + '0';
+			str[len--] = (n % 10) + 48;
 			n /= 10;
-		}
 	}
 	return (str);
 }
@@ -53,14 +53,16 @@ char	*ft_itoa(int n)
 {
 	char	*str;
 	int		len;
+	int		temp;
 
-	if (n == -2147483648)
-		return (ft_strdup("-2147483648"));
 	len = ft_extra(n);
-	str = malloc((len + 1) * sizeof(char));
-	if (str == NULL)
-		return (NULL);
-	str[len] = '\0';
+	if (n == -2147483648)
+		return (ft_strdup ("-2147483648"));
+	str = malloc(sizeof(char) * (len + 1));
+	if (!str)
+		return (0);
+	temp = n;
+	str[len--] = '\0';
 	str = ft_numbers(n, len, str);
 	return (str);
 }

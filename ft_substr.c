@@ -6,7 +6,7 @@
 /*   By: laurgonz <laurgonz@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/23 15:59:29 by laurgonz          #+#    #+#             */
-/*   Updated: 2023/04/01 19:58:48 by laurgonz         ###   ########.fr       */
+/*   Updated: 2023/04/05 17:13:42 by laurgonz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 /*Reserva (con malloc(3)) y devuelve una substring de
@@ -22,10 +22,14 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	size_t	i;
 
 	i = 0;
-	if (start >= len)
+	if (!s)
 		return (ft_strdup(""));
+	if (start > len || start >= ft_strlen(s))
+		return (ft_strdup(""));
+	if(ft_strlen(s + start) < len)
+		len = ft_strlen(s + start);
 	str = (char *)malloc(sizeof(char) * (len + 1));
-	if (str == NULL || s == NULL)
+	if (str == NULL )
 		return (NULL);
 	while (i < len && s[i] != '\0')
 	{
