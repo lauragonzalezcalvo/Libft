@@ -16,7 +16,6 @@
  * Devuelve un array de arrays, una matriz, con las strings resultantes de la 
  * separación.
  */
-
 #include "libft.h"
 
 int ft_countwords(char const *s, char c)
@@ -27,17 +26,10 @@ int ft_countwords(char const *s, char c)
 	counter = 0;
 	while (s[i] != '\0')
 	{
-		if ((s[i] != c && s[i - 1] == c) || (s[i] != c && s[i] == s[0]) )
+		if ((s[i] != c && s[i - 1] == c) || (s[i] != c && s[i] == s[0]))
 			counter++;
 		i++;
 	}
-	// while(s[i] == c)
-	// 	i++;
-	// if (s[i] != '\0')
-	// 	counter++;
-	// while(s[i] && s[i] != c)
-	// 	i++;
-	// printf("%d", counter);
 	return (counter);
 }
 int ft_strlength(char const *s, char c)
@@ -46,9 +38,31 @@ int ft_strlength(char const *s, char c)
 	length = 0;
 	while (s[length] != c && s[length] != '\0')
 		length++;
+	
 	return (length);
 }
-
+// en lugar de printarray ---> substring
+/* char *ft_printarray(char const *s, char c)
+{
+	char *new;
+	int j;
+	int k;
+	k = 0;
+	j = 0;
+	printf("%c  \n", c);
+	printf("%s \n", s);
+	while (s[j] != '\0')
+	{
+		if (s[j] != c)
+		{
+			new = malloc(sizeof(char) * (ft_strlength(&s[j], c) + 1));
+			k++;
+		}
+		j++;
+	}
+	return (new);
+}
+ */
 void 	ft_free(char **matrix, int p)
 {
 	while (p >= 0)
@@ -65,17 +79,14 @@ char **ft_split(char const *s, char c)
 		if (!s)
 		return (NULL);
 	matrix = (char **)malloc(sizeof(char *) * (ft_countwords(s, c)) + 1);
+
 	if (matrix == NULL)
 		return (NULL);
-	// if (ft_countwords(s, c) == 0)
-	// {
-	// 	// printf("hello");
-	// 	return(matrix);
-	// }
 	int p;
 	int	i;
 	p = 0;
 	i =  0;
+
 	while (p < ft_countwords(s, c))
 	{
 		if  (s[i] != c)
@@ -91,10 +102,11 @@ char **ft_split(char const *s, char c)
 		}
 			i++;
 	}
+
+
 	matrix[p] = 0;
 	return (matrix);
 }
-
 
 // int main(void)
 // {
