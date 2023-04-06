@@ -18,27 +18,27 @@ tiene una longitud máxima ’len’.*/
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-	char	*str;
-	size_t	i;
+	char			*dest;
+	unsigned int	i;
 
-	i = 0;
 	if (!s)
 		return (ft_strdup(""));
-	if (start > len || start >= ft_strlen(s))
+	if (len <= 0 || start > ft_strlen(s))
 		return (ft_strdup(""));
-	if(ft_strlen(s + start) < len)
-		len = ft_strlen(s + start);
-	str = (char *)malloc(sizeof(char) * (len + 1));
-	if (str == NULL )
+	if (len > ft_strlen(s) - start)
+		len = ft_strlen(s) - start;
+	dest = malloc(sizeof(char) * (len + 1));
+	if (!dest)
 		return (NULL);
-	while (i < len && s[i] != '\0')
-	{
-		str[i] = s[start];
-		i++;
-		start++;
+	i = 0;
+	while (i < len)
+	{	
+		dest[i] = s[start];
+		i ++;
+		start ++;
 	}
-	str[i] = '\0';
-	return (str);
+	dest[i] = '\0';
+	return (dest);
 }
 /*
 int	main(void)
