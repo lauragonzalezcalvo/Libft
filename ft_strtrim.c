@@ -21,13 +21,11 @@ char	*ft_strtrim(char const *s1, char const *set)
 	if (!s1 || !set)
 		return (NULL);
 	i = 0;
-	while (s1[i] != '\0' && ft_strchr(set, s1[i]) )
+	while (s1[i] != '\0' && ft_strchr(set, s1[i]))
 		i ++;
 	j = ft_strlen(s1);
-	while (j > 0 && ft_strchr(set, s1[j]) && s1[j] != '\0')
+	while (j > 0 && ft_strchr(set, s1[j]))
 		j --;
-	if (i >= j)
-		return (ft_strdup(""));
 	set_len = (j + 1) - i;
 	return (ft_substr(s1, i, set_len));
 }
